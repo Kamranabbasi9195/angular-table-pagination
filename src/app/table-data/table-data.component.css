@@ -1,0 +1,59 @@
+/* design the search button */
+
+
+.container {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #00dbeb; 
+}
+input[type="text"], select {
+    width: 75%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+}
+select {
+    width: 15%;
+}
+
+
+
+/* designing the tabel */
+table {
+    width: 95%;
+    border-collapse: collapse;
+    
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    border: 2px solid #ddd;
+}
+th {
+    background-color: #f2f2f2;
+}
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+tbody tr:hover {
+    background-color: #ddd;
+}
+
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination-button {
+    /* Add your button styling here */
+    margin: 0 5px; /* Adjust as needed */
+    padding: 2px;
+    border: 2px solid lightskyblue;
+    background-color: #00dbeb; 
+   color: #000000;
+   border-radius: 5px;
+   cursor: pointer;
+}

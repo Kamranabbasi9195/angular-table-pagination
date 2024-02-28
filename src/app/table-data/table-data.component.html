@@ -1,0 +1,48 @@
+
+<div class="main-header my-10 mx-36">
+<h3 class="container">
+    Welcome to Angular Table
+</h3>
+<div>
+    <input type="text" placeholder="Search" #filter (keyup)="filterData(filter.value)">
+    <select #pageSize (change)="changPageSize(pageSize.value)">
+        <option *ngFor="let size of pageSizes" [value]="size">{{size}}</option>
+        <!-- <option value="">10</option>
+        <option value="">20</option>
+        <option value="">50</option> -->
+    </select>
+</div>
+
+
+<table>
+    <thead>
+       <tr>
+        <th>#</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>UserName</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Action</th>
+       </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of visiabledata(); let i = index">
+            <td >{{i+1}}</td>
+            <td>{{user.Firstname}}</td>
+            <td>{{user.Lastname}}</td>
+            <td>{{user.UserName}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.phone}}</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="pagination-container mt-4">
+    <button class="pagination-button" (click)="perviousPage()">Previous</button>
+    <button (click)="changPage(i+1)" [ngClass]="{'bg-syan-500': i + 1 === currentPage}" *ngFor="let pageNumber of pageNumbers();
+     let i  = index" class="pagination-button">{{i+1}}</button>
+    <button class="pagination-button" (click)="nextPage()">Next</button>
+</div>
+</div>
